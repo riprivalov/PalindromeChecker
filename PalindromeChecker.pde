@@ -1,3 +1,4 @@
+String xD;
 public void setup()
 {
   String lines[] = loadStrings("palindromes.txt");
@@ -15,7 +16,7 @@ public void setup()
   }
 }
 public boolean palindrome(String sWord){
-  String xD = reverse(sWord);
+  xD = reverse(sWord);
   if ((reverse(sWord)).equals(reverse(xD)))
   return true;
   return false;
@@ -25,11 +26,11 @@ public boolean palindrome(String sWord){
 public String reverse(String sWord){
   String mrHoff = sWord;
   String bobs = "";
-  noSpaces(mrHoff);
-  onlyLetters(mrHoff);
-  noCapitals(mrHoff);
-  for (int i=mrHoff.length()-1;i>=0;i--){
-    bobs= bobs + mrHoff.substring(i,i+1);
+  String mrHoffie = noSpaces(mrHoff);
+  String hoffie = onlyLetters(mrHoffie);
+  String mrHofff = noCapitals(hoffie);
+  for (int i=mrHofff.length()-1;i>=0;i--){
+    bobs= bobs + mrHofff.substring(i,i+1);
   }
   return bobs;
 }
@@ -41,7 +42,7 @@ public String noCapitals(String sWord){
 public String noSpaces(String sWord){
   String ra = "";
   for (int i=0; i<sWord.length(); i++){
-    if (sWord.substring(i,i+1).equals(" "))
+    if (sWord.substring(i,i+1).equals(" ")||sWord.substring(i,i+1).equals("!"))
       i=i;
     else 
     ra = ra + sWord.substring(i,i+1);
